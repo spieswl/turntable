@@ -1,0 +1,11 @@
+<launch>
+
+    <param name="robot_description" textfile="$(find turntable)/urdf/DJ.urdf"/>
+
+    <node name="dial" pkg="turntable" type="run_turntable.py" ns="turntable1"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" ns="turntable1"/>
+    <node name="crank_tracker" pkg="turntable" type="crank_tracker.py" ns="turntable1"/>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turntable)/rviz/DJ.rviz" required="true"/>
+
+</launch>

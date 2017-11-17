@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>turntable</name>
+  <version>1.0.0</version>
+  <description>Simple package which directs a 2-link, 2R robotic arm to move in a circle.</description>
+
+  <maintainer email="spieswl2018@u.northwestern.edu">William Spies</maintainer>
+
+  <license>GPLv3</license>
+
+  <author email="spieswl2018@u.northwestern.edu">William Spies</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+
+  <export/>
+
+</package>

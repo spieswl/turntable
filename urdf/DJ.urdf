@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<robot name="DJ">
+
+    <material name="frame1">
+        <color rgba="1 0.05 0.25 1"/>
+    </material>
+
+    <material name="frame2">
+        <color rgba="0 1 0.3 1"/>
+    </material>
+
+    <material name="base">
+        <color rgba="0.2 0.2 0.2 1"/>
+    </material>
+
+<!-- KINEMATICS (JOINTS) -->
+
+    <joint name="world_joint" type="fixed">
+        <parent link="world"/>
+        <child link="base"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    </joint>
+
+    <joint name="J1" type="continuous">
+        <parent link="base"/>
+        <child link="L1"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="J2" type="continuous">
+        <parent link="L1"/>
+        <child link="L2"/>
+        <origin xyz="1.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <joint name="EE" type="fixed">
+        <parent link="L2"/>
+        <child link="EE"/>
+        <origin xyz="1.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    </joint>
+
+<!-- INERTIAL (LINKS) -->
+
+    <link name="world"/>
+
+    <link name="base">
+        <visual>
+            <geometry>
+                <cylinder length="0.11" radius="0.1"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="base"/>
+        </visual>
+    </link>
+
+    <link name="L1">
+        <visual>
+            <geometry>
+                <box size="1.0 0.1 0.1"/>
+            </geometry>
+            <origin xyz="0.5 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="frame1"/>
+        </visual>
+    </link>
+
+    <link name="L2">
+        <visual>
+            <geometry>
+                <box size="1.0 0.1 0.1"/>
+            </geometry>
+            <origin xyz="0.5 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="frame2"/>
+        </visual>
+    </link>
+
+    <link name="EE"/>
+
+</robot>

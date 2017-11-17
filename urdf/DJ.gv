@@ -1,0 +1,17 @@
+digraph G {
+node [shape=box];
+"world" [label="world"];
+"base" [label="base"];
+"L1" [label="L1"];
+"L2" [label="L2"];
+"EE" [label="EE"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"world" -> "world_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"world_joint" -> "base"
+"base" -> "J1" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"J1" -> "L1"
+"L1" -> "J2" [label="xyz: 1 0 0 \nrpy: 0 -0 0"]
+"J2" -> "L2"
+"L2" -> "EE" [label="xyz: 1 0 0 \nrpy: 0 -0 0"]
+"EE" -> "EE"
+}
