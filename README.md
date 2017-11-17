@@ -45,7 +45,7 @@ Since DJ is fairly simple, his construction can be essentially represented as...
 
 ### Code Description
 
-[Run_turntable.py](https://github.com/spieswl/turntable/blob/master/scripts/run_turntable.py) handles publishing joint angle solutions for the arm to follow a circular tracjectory on the aforementioned `joint_states` topic. This script will perform some intial ROS setup, establish the update rate at 50 Hz, and loop through a process which entails 1) determining new joint angles for J1 and J2 by using the included function `IK_2R_2L`, and 2) forming the JointState message using the newly found angles, current system time, and a sequence ID. Note that the frame_ID called out is for the end effector (EE).
+[Run_turntable.py](https://github.com/spieswl/turntable/blob/master/scripts/run_turntable.py) handles publishing joint angle solutions for the arm to follow a circular trajectory on the aforementioned `joint_states` topic. This script will perform some intial ROS setup, establish the update rate at 50 Hz, and loop through a process which entails 1) determining new joint angles for J1 and J2 by using the included function `IK_2R_2L`, and 2) forming the JointState message using the newly found angles, current system time, and a sequence ID. Note that the frame_ID called out is for the end effector (EE).
 
 This package does not have any specific state publishing mechanism included. Instead, it leverages the `robot_state_publisher` package (*see the included launch files for an example of starting a node for this*) to make `tf` data available to other potential consumers.
 
