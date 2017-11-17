@@ -49,7 +49,7 @@ Since DJ is fairly simple, his construction can be essentially represented as...
 
 This package does not have any specific state publishing mechanism included. Instead, it leverages the `robot_state_publisher` package (*see the included launch files for an example of starting a node for this*) to make `tf` data available to other potential consumers.
 
-[Crank_tracker.py](https://github.com/ME495-EmbeddedSystems/spieswl/turntable/blob/master/scripts/crank_tracker.py) requires that valid `tf` data be available; if so, it will take the relevant pieces of the most recently available transform information to create markers. These markers are published at a rate of 20 Hz at the end of DJ's arm. Much of the code in this file is actually formatting the marker icons that you will see when using `rviz`.
+[Crank_tracker.py](https://github.com/spieswl/turntable/blob/master/scripts/crank_tracker.py) requires that valid `tf` data be available; if so, it will take the relevant pieces of the most recently available transform information to create markers. These markers are published at a rate of 20 Hz at the end of DJ's arm. Much of the code in this file is actually formatting the marker icons that you will see when using `rviz`.
 
 <img src="https://github.com/spieswl/turntable/raw/master/images/results.png" width=480/>
 
