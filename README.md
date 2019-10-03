@@ -1,8 +1,6 @@
-## turntable - v1.0.0
+## turntable
 
-*I just could not shake the visual that the 2R robot arm is cranking a turntable, thus, the name stuck.*
-
-The purpose of this ROS package is to evaluate the creation, excitation, and simulation of a simple URDF describing a two-link, two-joint robotic actuator. This package contains two scripts designed to 1) generate joint angles to direct the actuator to follow a circular trajectory and 2) publish markers at points along the path of the actuator. If desired, the package components can be run individually, however, it is **STRONGLY** recommended to use one of the provided launch files to run this package.
+The purpose of this ROS package is to evaluate the creation, excitation, and simulation of a simple URDF describing a two-link, two-joint robotic actuator. This package contains two scripts designed to 1) generate joint angles to direct the actuator to follow a circular trajectory and 2) publish markers at points along the path of the actuator. If desired, the package components can be run individually, however, it is **strongly** recommended to use one of the provided launch files to run this package.
 
 At runtime, the launch files will set the robot description on the parameter server, run the required nodes, and launch `rviz` with a given configuration file. Nominally, all nodes and topics needed will be inside the `turntable1` namespace. This namespace can be configured by modifying the [demonstration launch file](https://github.com/spieswl/turntable/blob/master/launch/demo.launch).
 
@@ -34,7 +32,7 @@ A description of the interfaces in use, an overview of the robot "DJ", a quick b
 
 ### Robot Overview
 
-The robot in this package is aptly named "DJ". The URDF for DJ is found [here](https://github.com/spieswl/turntable/blob/master/urdf/DJ.urdf). You can see the `graphviz` representation of DJ's construction by looking at [this Graphviz PDF](https://github.com/spieswl/turntable/blob/master/urdf/DJ.pdf).
+The robot in this package is nicknamed "DJ". The URDF for DJ is found [here](https://github.com/spieswl/turntable/blob/master/urdf/DJ.urdf). You can see the `graphviz` representation of DJ's construction by looking at [this Graphviz PDF](https://github.com/spieswl/turntable/blob/master/urdf/DJ.pdf).
 
 Since DJ is fairly simple, his construction can be essentially represented as...
 
